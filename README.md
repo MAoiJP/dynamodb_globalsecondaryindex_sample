@@ -20,7 +20,7 @@ DynamoDBのGlobalSecondaryIndexの使い方のサンプル（※特定の個人�
 - boto3については最新のライブラリを利用しているはずなので、これで問題ないはず
 
 ### ターミナルに投入したCLIコマンド
-
+```
 table_name=XXXXXXXXXX
 awslocal dynamodb list-tables
 
@@ -59,9 +59,12 @@ awslocal dynamodb query \
     --index-name UserCodeIndex \
     --key-condition-expression "user_code = :user_code" \
     --expression-attribute-values  '{":user_code":{"S":"dummy_user_code"}}'
-
+```
 ## poetry install
+```
 poetry install
-
+```
 ## poetry環境でプログラムを実行
+```
 poetry run python ./main.py
+```
